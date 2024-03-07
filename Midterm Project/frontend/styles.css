@@ -1,0 +1,126 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif; /* Example modern font */
+  background-color: #f4f7f6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+button {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Make sure padding doesn't affect overall width */
+}
+
+input::placeholder {
+    color: #aaa; /* Light grey placeholder text */
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+    }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+td {
+  background-color: #f9f9f9;
+}
+
+.edit-button, .save-button {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+  margin-right: 5px;
+}
+
+.edit-button:hover, .save-button:hover {
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+
+.delete-button {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: #c9302c; /* Slightly darker on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .container {
+      width: 95%;
+      margin: 30px auto;
+      overflow-x: auto; /* Allow table scrolling on small screens */
+  }
+}
+
+/* Focus effect for input fields */
+input:focus {
+  border-color: #5cb85c; /* Same as button color */
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(92, 184, 92, 0.25);
+}
+
+/* Visual feedback for delete action */
+.delete-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(217, 83, 79, 0.25);
+}
